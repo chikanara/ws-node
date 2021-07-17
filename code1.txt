@@ -1,0 +1,34 @@
+
+// var a = 15;
+// var b = 5;
+// console.log(`the sum of ${a} and ${b} is ${a+b}`)
+// console.log("hello world..")
+
+// import { multiply } from "./mathlib";// install babel
+// const mathlib = require("./mathlib")
+const {sum,multiply,minus}= require("./mathlib")
+// console.log(mathlib)
+// let s = sum(12,14)
+// console.log(s)
+// console.log(process.argv)
+const a = Number(process.argv[2] )
+const operation = process.argv[3]
+const b = Number(process.argv[4])
+// console.log(sum(a,b))
+// console.log(multiply(a,b))
+// console.log(minus(a,b))
+switch (operation) {
+    case "+":
+        console.log(sum(a,b))
+        break;
+    case "-":
+        console.log(minus(a,b))
+        break;
+    case "*":
+        console.log(multiply(a,b))
+    break;
+
+    default:
+        console.log("try again")
+    break;
+}
